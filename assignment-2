@@ -1,0 +1,54 @@
+1. Find all products in the "Food" category.
+   db.products.find({category:"Food"})
+
+2.Find all products with a rating of 4.7 or higher.
+  db.products.find({rating:{$gte:4.7}})
+
+3.Find all products where the new price is less than $5.00.
+  db.products.find({new_price:{$lt:5}})
+
+4.Find all products that are available in "Blue" color.
+  db.products.find({colors:"Blue"})
+
+5.Find all products in the "Electronics" category with a rating of 4.8.
+  db.products.find({category:"Electronics",rating:4.8})
+
+6.Find all products that have a quantity greater than 100.
+  db.products.find({product_qty:{$gt:100}})
+
+7.Find all products with an old price greater than $50.00.
+  db.products.find({old_price:{$gt:50}})
+
+8.Find all products in the "Health" category.
+  db.products.find({category:"Health"})
+
+9.Find all products with a "sub_category" of "Snacks".
+  db.products.find({sub_category:"Snacks"})
+
+10.Find all products that have a discount of more than $10.00 (difference between old and new price).
+
+
+11.Find all products with a rating less than 4.5.
+   db.products.find({rating:{$lt:4.5}})
+
+12.Find all products that are available in "Red" color.
+   db.products.find({colors:"Red"})
+
+13.Find all products in the "Fruits" sub-category.
+   db.products.find({sub_category:"Fruits"})
+
+14.Find all products with a "product_qty" less than 30.
+   db.products.find({product_qty:{$lt:30}})
+
+15.Find all products where the old price is between $50.00 and $100.00.
+   db.products.find({$and:[{old_price:{$gt:50}},{old_price:{$lt:100}}]})
+
+16.Find all products in the "Smartphones" sub-category.
+   db.products.find({sub_category:"Smartphones"})
+
+17.Find all products with a new price greater than $1000.00.
+   db.products.find({new_price:{$gt:1000}})
+
+18.Find all products that are available in multiple colors.
+   db.products.find({"colors.1":{$exists:true}})
+
